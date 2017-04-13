@@ -12,6 +12,7 @@ eureka:
   instance:
     prefer-ip-address: true
 #下面的配置不器用eureka，这样ribbon客户端只会到指定的localhost:7900去请求服务，而不是到eureka服务端获取服务列表
+#但是并不影响将当前的服务注册到eureka服务端（也就是说可以在eureka服务端是可以看到当前服务在8010端口启动了）
 ribbon:
   eureka:
    enabled: false
